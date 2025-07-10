@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  flex-direction: column
+}
+
+.game{
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows:  100px 100px 100px 100px;
+  border: 2px solid;
+  width: 400px;
+  height: 400px;
+  margin-top: 50px;
+}
+.cell{
+  display: flex;
+  height: 40;
+  width: 40;
+  border: 1px solid black;
+  font-size: 46px;
+  color: white;
+  font-family: "Pacifico",  cursive;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#void{
+  background: white;
+}
+#correct{
+  background: #E88A45;
+}
+#incorrect{
+  background: #6AC6B8;
+}
+
+.btn-restart{
+  margin-top: 30px;
+  width: 160px;
+  height: 70px;
+  font-size: 32px;
+  font-family: "Pacifico", cursive;
+  background:#007991;
+  border-radius: 15px ;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.btn-restart:hover{
+  opacity: 1;
+}
+
+.text-win{
+  position: absolute;
+  font-family: "Pacifico", cursive;
+  font-size: 64px;
+  color: black;
+  width: 250px;
+  transform: translate(10px, 230px);
+  pointer-events: none;
+}
+.hidden{
+  opacity: 0;
+}
+.visible{
+  opacity: 1;
+}
+

@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+span,
+p {
+  font-family: "Poetsen One", sans-serif;
+}
+
+.wrapper {
+  background-color: #fff2eb;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.left-bar {
+  position: absolute;
+  height: 100vh;
+  width: 250px;
+  background-color: #ffe8cd;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.left-bar img {
+  transform: translateY(20px);
+  transition: 1s;
+  transform-origin: -10px -205px;
+  cursor: pointer;
+}
+.img-wrapper:hover {
+  transform: scale(1.05);
+}
+.img-wrapper{
+  transition: 1s;
+}
+.img-wrapper img:hover{
+  opacity: 0.7;
+  transition: 1s;
+}
+.map-name{
+  font-size: 32px;
+  position: absolute;
+  opacity: 0; 
+  z-index: 5;
+  transform: translate(65px, -80px);
+  font-weight: 200;
+  pointer-events: none;
+  transition: 1s;
+}
+.img-wrapper:hover .map-name{
+  opacity: 1;
+}
+.map-name:hover{
+  opacity: 1;
+}
+
+.ready-to-game {
+  position: absolute;
+  transform: translate(775px, 20px);
+
+  /* pointer-events: none; */
+  text-align: center;
+  justify-content: center;
+  height: 100px;
+  width: 240px;
+  border-radius: 15px;
+  opacity: 0.7;
+}
+.text-span {
+  z-index: 2;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 500;
+  font-size: 52px;
+}
+
+.svg-img {
+  position: absolute;
+  /* pointer-events: none; */
+}
+/* мечи */
+#sword-svg {
+  height: 250px;
+  transform: translate(770px, -5px) rotate(110deg);
+  opacity: 0.8;
+  /* pointer-events: none; */
+}
+#sword2-svg {
+  height: 250px;
+  transform: translate(530px, -7px) rotate(-21deg);
+  opacity: 0.8;
+  /* pointer-events: none; */
+}
+/* выбор персонажа */
+.select-player {
+  display: inline-block;
+  position: absolute;
+  transform: translate(650px, 350px);
+}
+.select-player span {
+  position: absolute;
+  font-size: 38px;
+  transform: translate(130px, -70px);
+}
+.person{
+  transition: 1s;
+  transform: translate(100px, -50px);
+}
+.person:hover{
+  transform: translate(100px, -50px) scale(1.15);
+}
+
+
+/* button */
+
+.button-standart{
+  position: absolute;
+  background: #FF8282;
+  width: 200px;
+  height: 100px;
+  transform: translate(815px, 500px);
+  border-radius: 15px;
+  border: none;
+  box-shadow: inset 5px -5px red;
+  cursor: pointer;
+  transition: .5s;
+}
+#button-start:hover{
+  transform: translate(815px, 500px) scale(1.05);
+  box-shadow: inset 5px -5px #FFB433;
+  background: #FFCF50;
+}
+
+#p-start{
+  font-size: 52px;
+  font-weight: 900;
+  color: #EC5228; 
+}

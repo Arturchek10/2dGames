@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* canvas style */
+.wrapper{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+#canvas1{
+  border: 20px solid black;
+  background:  rgb(181, 181, 246);
+  max-width: 90%;  
+}
+/*  */
