@@ -138,6 +138,9 @@ function restartGame() {
   isCorrectNum(matrix);
   textWinEl.classList.add("hidden");
   textWinEl.classList.remove("visible");
+  timerEl.textContent = `0:00`
+  resultTime = 0
+  start = Date.now()
 }
 
 function cleanGameBoard() {
@@ -170,4 +173,25 @@ function shuffleArray(array) {
   return array;
 }
 
+let start = Date.now() 
+
+// time
+const timerEl = document.getElementById('timer-score')
+timerEl.textContent = `0:00`
+
+function timer(){
+  const current = Date.now()
+  let resultTime = Math.floor((current - start) / 1000)
+  let minutes = Math.floor(resultTime / 60)
+  let seconds = String(Math.floor(resultTime % 60)).padStart(2, "0")
+  let hours = Math.floor(resultTime / 3600)
+  if (hours > 0){
+    resultTime = `${hours}:${minutes}:${seconds}`
+  } else {
+    resultTime = `${minutes}:${seconds}`
+  }
+  timerEl.textContent = resultTime
+}
+setInterval(timer, 1000)
+// 
 restartEl.addEventListener("click", restartGame);
